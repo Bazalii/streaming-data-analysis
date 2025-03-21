@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StocksProcessing.Generator", "StocksProcessing.Generator\StocksProcessing.Generator.csproj", "{37064738-B24F-4C1B-A2B9-9D0D4419C854}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StocksProcessing.Preprocessor", "StocksProcessing.Preprocessor\StocksProcessing.Preprocessor.csproj", "{1F5231D2-899D-4828-8054-D0640FE0224D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37064738-B24F-4C1B-A2B9-9D0D4419C854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37064738-B24F-4C1B-A2B9-9D0D4419C854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37064738-B24F-4C1B-A2B9-9D0D4419C854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37064738-B24F-4C1B-A2B9-9D0D4419C854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F5231D2-899D-4828-8054-D0640FE0224D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F5231D2-899D-4828-8054-D0640FE0224D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F5231D2-899D-4828-8054-D0640FE0224D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F5231D2-899D-4828-8054-D0640FE0224D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

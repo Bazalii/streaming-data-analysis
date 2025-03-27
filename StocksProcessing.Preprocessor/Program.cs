@@ -1,8 +1,24 @@
+using Serilog;
+using Serilog.Events;
 using StocksProcessing.Preprocessor.Preprocessors;
 
-const string kafkaConnectionString = "localhost:9092,localhost:9094";
-const string currencyRateChangesWebsocket = "ws://localhost:5000/ws/stocks/currencies";
+var builder = WebApplication.CreateBuilder(args);
 
-var stocksPreprocessor = new StocksPreprocessor(kafkaConnectionString, currencyRateChangesWebsocket);
+builder.Host.UseSerilog((_, loggerConfiguration) =>
+{
+    loggerConfiguration
+        .MinimumLevel.Information()
+        .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+        .MinimumLevel.Override("System", LogEventLevel.Warning)
+        .WriteTo.Console();
+});
 
-await stocksPreprocessor.ProcessCurrencyRatesChangeEventsAsync();
+builder.Services.AddHealthChecks();
+builder.Services
+    .AddHostedService<StocksPreprocessor>();
+
+var app = builder.Build();
+
+app.MapHealthChecks("/ping");
+
+await app.RunAsync("http://*:5001");

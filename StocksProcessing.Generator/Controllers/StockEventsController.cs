@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using StocksProcessing.Generator.Models.Generators;
+using StocksProcessing.Generator.Generators;
 
 namespace StocksProcessing.Generator.Controllers;
 

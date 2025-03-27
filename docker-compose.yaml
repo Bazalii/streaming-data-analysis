@@ -48,7 +48,9 @@ services:
     command: >
       bash -c "
       cub kafka-ready -b kafka-node-1:9093,kafka-node-2:9095 1 60 &&
-      kafka-topics --create --if-not-exists --bootstrap-server kafka-node-1:9093,kafka-node-2:9095 --topic currency_rates_changes --partitions 2 --replication-factor 2 --config retention.ms=3600000
+      kafka-topics --create --if-not-exists --bootstrap-server kafka-node-1:9093,kafka-node-2:9095 --topic currency_rates_changes --partitions 1 --replication-factor 2 --config retention.ms=3600000 &&
+      kafka-topics --create --if-not-exists --bootstrap-server kafka-node-1:9093,kafka-node-2:9095 --topic currency_statistics --partitions 1 --replication-factor 2 --config retention.ms=3600000 &&
+      kafka-topics --create --if-not-exists --bootstrap-server kafka-node-1:9093,kafka-node-2:9095 --topic currency_purchases --partitions 1 --replication-factor 2 --config retention.ms=3600000
       "
     depends_on:
       - kafka-node-1

@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StocksProcessing.Generator"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StocksProcessing.Preprocessor", "StocksProcessing.Preprocessor\StocksProcessing.Preprocessor.csproj", "{1F5231D2-899D-4828-8054-D0640FE0224D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StocksProcessing.Trader", "StocksProcessing.Trader\StocksProcessing.Trader.csproj", "{B66FE1AD-FB07-411C-9AE4-86B3C478F893}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StocksProcessing.Streamer", "StocksProcessing.Streamer\StocksProcessing.Streamer.csproj", "{47D48010-1827-4164-BF28-E3F30B829E80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{1F5231D2-899D-4828-8054-D0640FE0224D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F5231D2-899D-4828-8054-D0640FE0224D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F5231D2-899D-4828-8054-D0640FE0224D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B66FE1AD-FB07-411C-9AE4-86B3C478F893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B66FE1AD-FB07-411C-9AE4-86B3C478F893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B66FE1AD-FB07-411C-9AE4-86B3C478F893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B66FE1AD-FB07-411C-9AE4-86B3C478F893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47D48010-1827-4164-BF28-E3F30B829E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47D48010-1827-4164-BF28-E3F30B829E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47D48010-1827-4164-BF28-E3F30B829E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47D48010-1827-4164-BF28-E3F30B829E80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

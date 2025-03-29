@@ -1,6 +1,8 @@
 using Serilog;
 using Serilog.Events;
-using StocksProcessing.Preprocessor.Preprocessors;
+using StocksProcessing.Streamer;
+using StocksProcessing.Streamer.Consumers;
+using StocksProcessing.Streamer.Streamers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,10 +17,16 @@ builder.Host.UseSerilog((_, loggerConfiguration) =>
 
 builder.Services.AddHealthChecks();
 builder.Services
-    .AddHostedService<StocksPreprocessor>();
+    .AddHostedService<ApplicationInitializer>()
+    .AddSingleton<CurrenciesStatisticsConsumer>()
+    .AddSingleton<CurrenciesStatisticsProducer>()
+    .AddControllers();
 
 var app = builder.Build();
 
 app.MapHealthChecks("/ping");
 
-await app.RunAsync("http://*:5001");
+app.UseWebSockets();
+app.MapControllers();
+
+await app.RunAsync("http://*:5002");
